@@ -1,0 +1,30 @@
+<html xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:tiles="http://tiles.apache.org/tags-tiles"
+      xmlns:spring="http://www.springframework.org/tags"
+      xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+      xmlns:mobile="urn:jsptagdir:/WEB-INF/tags/mobile">
+
+<jsp:directive.page contentType="text/html;charset=UTF-8"/>
+<jsp:directive.page pageEncoding="UTF-8"/>
+
+<head>
+    <spring:message code="application_name" var="app_name" htmlEscape="false"/>
+    <title><spring:message code="welcome_h3" arguments="${app_name}"/></title>
+    <mobile:load-env />
+
+    <tiles:insertAttribute name="user-head-content" ignore="true" />
+    <!--<util:load-scripts/> -->
+</head>
+
+<body class="tundra spring">
+<div id="wrapper">
+    <tiles:insertAttribute name="header" ignore="true"/>
+    <tiles:insertAttribute name="menu" ignore="true"/>
+
+    <div id="main">
+        <tiles:insertAttribute name="body"/>
+        <tiles:insertAttribute name="footer" ignore="true"/>
+    </div>
+</div>
+</body>
+</html>

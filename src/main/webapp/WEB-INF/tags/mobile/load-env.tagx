@@ -1,0 +1,19 @@
+<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+          xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <spring:url value="/js/dojo-release-1.7.1-src" var="dojo_home" scope="request" />
+    <!-- TODO - device detection on server to set appropriate theme -->
+    <!-- configure dojo javascript and css -->
+    <link href="${dojo_home}/dojox/mobile/themes/iphone/iphone.css" rel="stylesheet" type="text/css"><!-- stuff --></link>
+    <script type="text/javascript" src="${dojo_home}/dojo/dojo.js"  djConfig="async:1,parseOnLoad: true"><!-- hello man --></script>
+
+
+    <script>
+           require([
+             "dojox/mobile/parser", // This mobile app uses declarative programming with fast mobile parser
+             "dojox/mobile"        // This is a mobile app.
+           ]); // Skip module alias and function block because we're not doing anything special...
+     </script>
+</jsp:root>
