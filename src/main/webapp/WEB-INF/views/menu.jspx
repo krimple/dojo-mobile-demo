@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:mobile="urn:jsptagdir:/WEB-INF/tags/mobile"
+     id="menu" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
-        <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
-            <menu:item id="i_controller__dojodemoindex_id" messageCode="global_generic" url="/dojodemo/index" z="suoBpg5fjDuGI/vKFTv+4/w2Hko="/>
-        </menu:category>
-    </menu:menu>
+    <div id="foo" data-dojo-type="dojox.mobile.View">
+
+    <mobile:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <mobile:category id="c_controller">
+            <mobile:item id="i_controller__dojodemoindex_id"
+                       messageCode="global_generic"
+                       url="/dojodemo" />
+        </mobile:category>
+    </mobile:menu>
+    </div>
 </div>

@@ -9,7 +9,6 @@
 	<!-- Turns on support for mapping requests to Spring MVC @Controller methods
 	     Also registers default Formatters and Validators for use across all @Controllers -->
 	<mvc:annotation-driven/>
-	
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources -->
 	<mvc:resources location="/, classpath:/META-INF/web-resources/" mapping="/resources/**"/>
@@ -19,6 +18,7 @@
 	
 	<!-- register "global" interceptor beans to apply to all registered HandlerMappings -->
 	<mvc:interceptors>
+        <bean class="com.chariot.dojodemos.mobile.web.Html5Interceptor" />
 		<bean class="org.springframework.web.servlet.theme.ThemeChangeInterceptor"/>
 		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" p:paramName="lang"/>
 	</mvc:interceptors>

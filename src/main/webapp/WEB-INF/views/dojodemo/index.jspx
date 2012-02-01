@@ -8,18 +8,9 @@
     <jsp:output omit-xml-declaration="yes"/>
     <spring:message code="label_dojodemo_index" htmlEscape="false" var="title"/>
 
-    <script type="text/javascript">
-
-        require.ready(function () {
-            dojox.byId("done").innerHTML = "OK";
-        });
-
-    </script>
     <spring:message code="application_name" htmlEscape="false" var="app_name"/>
 
-    <h3>
-        <div id="done">replace me</div>
-    </h3>
+
     <div id="foo" data-dojo-type="dojox.mobile.View">
         <h1 data-dojo-type="dojox.mobile.Heading">View 1</h1>
         <ul data-dojo-type="dojox.mobile.RoundRectList">
