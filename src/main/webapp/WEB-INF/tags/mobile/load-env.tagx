@@ -3,17 +3,17 @@
     <meta name="viewport"
           content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <spring:url value="/js/dojo-release-1.7.1-src" var="dojo_home" scope="request" />
+    <spring:url value="/js/dojo-release-1.7.1-src/" var="dojo_home" scope="request" />
     <!-- TODO - device detection on server to set appropriate theme -->
     <!-- configure dojo javascript and css -->
     <link href="${dojo_home}/dojox/mobile/themes/iphone/iphone.css" rel="stylesheet" type="text/css"><!-- stuff --></link>
     <script type="text/javascript" src="${dojo_home}/dojo/dojo.js"  djConfig="async:1,parseOnLoad: true"><!-- hello man --></script>
 
 
-    <script>
+    <script type="text/javascript">
            require([
-             "dojox/mobile/parser", // This mobile app uses declarative programming with fast mobile parser
-             "dojox/mobile"        // This is a mobile app.
-           ]); // Skip module alias and function block because we're not doing anything special...
+             "dojox/mobile/parser",
+             "dojox/mobile"
+           ]);
      </script>
 </jsp:root>

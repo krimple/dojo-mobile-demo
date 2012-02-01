@@ -17,9 +17,11 @@ public class Html5Interceptor extends HandlerInterceptorAdapter {
   public void postHandle(HttpServletRequest request,
                          HttpServletResponse response,
                          Object handler, ModelAndView modelAndView) throws Exception {
-    response.getWriter().println("<!DOCTYPE html>");
-    response.getWriter().flush();
-    super.postHandle(request, response, handler, modelAndView);    //To change body of overridden methods use File | Settings | File Templates.
+    /*if (!response.isCommitted()) {
+        response.getWriter().println("<!DOCTYPE html>");
+        response.getWriter().flush();
+    } */
+    super.postHandle(request, response, handler, modelAndView);
   }
 
   @Override
