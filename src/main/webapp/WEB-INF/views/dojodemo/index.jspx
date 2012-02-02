@@ -11,36 +11,4 @@
     <spring:message code="label_dojodemo_index" htmlEscape="false" var="title"/>
 
     <spring:message code="application_name" htmlEscape="false" var="app_name"/>
-
-
-    <div id="menu" data-dojo-type="dojox.mobile.View">
-        <h1 data-dojo-type="dojox.mobile.Heading">Main Menu</h1>
-        <ul data-dojo-type="dojox.mobile.RoundRectList">
-            <li data-dojo-type="dojox.mobile.ListItem" moveTo="accounts-category" label="Accounts"></li>
-            <li data-dojo-type="dojox.mobile.ListItem" moveTo="customer-category" label="Customers"></li>
-        </ul>
-    </div>
-
-    <div id="accounts-category" data-dojo-type="dojox.mobile.View">
-        <h1 data-dojo-type="dojox.mobile.Heading" back="menu" moveTo="menu">Accounts</h1>
-        <ul data-dojo-type="dojox.mobile.RoundRectList">
-            <li data-dojo-type="dojox.mobile.ListItem">
-                <a href="${url_root}/accounts?form">New Account</a>
-            </li>
-            <li data-dojo-type="dojox.mobile.ListItem">
-                <a href="${url_root}/accounts">List All Accounts</a>
-            </li>
-        </ul>
-    </div>
-
-    <div id="customers-category" data-dojo-type="dojox.mobile.View">
-        <h1 data-dojo-type="dojox.mobile.Heading" back="menu" moveTo="menu">Customers</h1>
-        <ul data-dojo-type="dojox.mobile.RoundRectList">
-            <li data-dojo-type="dojox.mobile.ListItem" label="New"
-                icon="${dojo_home}/dojox/mobile/tests/images/i-icon-2.png">
-            </li>
-            <li data-dojo-type="dojox.mobile.ListItem" label="List All"
-                icon="${dojo_home}/dojox/mobile/tests/images/i-icon-2.png"></li>
-        </ul>
-    </div>
 </div>
